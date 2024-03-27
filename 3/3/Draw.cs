@@ -42,15 +42,18 @@ namespace _3
                 grad.Add(Color.FromArgb(nr, ng, nb));
             }
 
-            grad.Reverse();
+            //grad.Reverse();
             return grad;
         }
 
         public static Color GetColor(Color color, int light)
         {
-            int r = Math.Min(255, color.R + light);
+            /*int r = Math.Min(255, color.R + light);
             int g = Math.Min(255, color.G + light);
-            int b = Math.Min(255, color.B + light);
+            int b = Math.Min(255, color.B + light);*/
+            int r = Math.Min(255, Params.bg_color.R + light * (color.R - Params.bg_color.R) / 255);
+            int g = Math.Min(255, Params.bg_color.G + light * (color.G - Params.bg_color.G) / 255);
+            int b = Math.Min(255, Params.bg_color.B + light * (color.B - Params.bg_color.B) / 255);
             return Color.FromArgb(r, g, b);
         }
         public static void DrawPointOnGraphics(Graphics graphics, Brush brush, Point point)
@@ -70,19 +73,19 @@ namespace _3
             steps = 0;
             graphics.DrawLine(pen, x1, y1, x2, y2);
             if (!draw)
-                graphics.Clear(Color.White);
+                graphics.Clear(Params.bg_color);
         }
 
         public static void draw_algo_dda(Graphics graphics, Pen pen, float x1, float y1, float x2, float y2, bool draw, bool stepCount, out uint steps)
         {
-            List<Point> points = DDA.DDAAlgorithm(x1, y1, x2, y2, out steps, stepCount);
+            List<Point> points = DDA.DDAAlgorithm((int)x1, (int)y1, (int)x2, (int)y2, out steps, stepCount);
             if (draw)
                 DrawPointsOnGraphics(graphics, pen, points);
         }
 
         public static void draw_algo_br_float(Graphics graphics, Pen pen, float x1, float y1, float x2, float y2, bool draw, bool stepCount, out uint steps)
         {
-            List<Point> points = Bresenham.BresenhamFloat(x1, y1, x2, y2, out steps, stepCount);
+            List<Point> points = Bresenham.BresenhamFloat((int)x1, (int)y1, (int)x2, (int)y2, out steps, stepCount);
             if (draw)
                 DrawPointsOnGraphics(graphics, pen, points);
         }
@@ -108,14 +111,14 @@ namespace _3
 
         public class DDA
         {
-            public static List<Point> DDAAlgorithm(float x1, float y1, float x2, float y2, out uint steps, bool stepCount = false)
+            public static List<Point> DDAAlgorithm(int x1, int y1, int x2, int y2, out uint steps, bool stepCount = false)
             {
-                float dx = x2 - x1;
-                float dy = y2 - y1;
+                int dx = x2 - x1;
+                int dy = y2 - y1;
                 steps = 0;
 
                 if (dx == 0 && dy == 0)
-                    return new List<Point> { new Point(Convert.ToInt32(Math.Round(x1)), Convert.ToInt32(Math.Round(y1))) };
+                    return new List<Point> { new Point(x1, y1) };
 
                 float l = Math.Abs(dx) >= Math.Abs(dy) ? Math.Abs(dx) : Math.Abs(dy);
 
@@ -176,10 +179,10 @@ namespace _3
                     return 0;
             }
 
-            public static List<Point> BresenhamFloat(float x1, float y1, float x2, float y2, out uint steps, bool stepCount = false)
+            public static List<Point> BresenhamFloat(int x1, int y1, int x2, int y2, out uint steps, bool stepCount = false)
             {
-                float dx = x2 - x1;
-                float dy = y2 - y1;
+                int dx = x2 - x1;
+                int dy = y2 - y1;
                 steps = 0;
 
                 if (dx == 0 && dy == 0)
@@ -194,7 +197,7 @@ namespace _3
                 bool exchange;
                 if (dy - dx > 0)
                 {
-                    float temp = dx;
+                    int temp = dx;
                     dx = dy;
                     dy = temp;
                     exchange = true;
@@ -206,8 +209,8 @@ namespace _3
 
                 float e = dy / (float)dx - 0.5f;
 
-                float x = x1;
-                float y = y1;
+                int x = (int)x1;
+                int y = (int)y1;
                 List<Point> points = new List<Point>();
                 
                 float xBuf = x;
@@ -216,7 +219,7 @@ namespace _3
                 {
                     if (!stepCount)
                     {
-                        points.Add(new Point((int)x, (int)y));
+                        points.Add(new Point(x, y));
                     }
 
                     if (e >= 0)
@@ -450,11 +453,11 @@ namespace _3
                             cur_color = GetColor(pen.Color, (int)Math.Round(Math.Abs(d2) * I));
                             if (draw)
                                 DrawPointOnGraphics(graphics, new SolidBrush(cur_color), new Point((int)x1 + 1, y));
-                            points.Add(new Point((int)x1 + 1, y));
+                            /*points.Add(new Point((int)x1 + 1, y));*/
                             cur_color = GetColor(pen.Color, (int)Math.Round(Math.Abs(d1) * I));
                             if (draw)
                                 DrawPointOnGraphics(graphics, new SolidBrush(cur_color), new Point((int)x1, y));
-                            points.Add(new Point((int)x1, y));
+/*                            points.Add(new Point((int)x1, y));*/
                         }
                         else if (y < Math.Round(y2) && (int)x1 != (int)(x1 + m))
                         {
@@ -489,11 +492,11 @@ namespace _3
                             cur_color = GetColor(pen.Color, (int)Math.Round(Math.Abs(d2) * I));
                             if (draw)
                                 DrawPointOnGraphics(graphics, new SolidBrush(cur_color), new Point(x, (int)y1 + 1));
-                            points.Add(new Point(x, (int)y1 + 1));
+                           /* points.Add(new Point(x, (int)y1 + 1));*/
                             cur_color = GetColor(pen.Color, (int)Math.Round(Math.Abs(d1) * I));
                             if (draw)
                                 DrawPointOnGraphics(graphics, new SolidBrush(cur_color), new Point(x, (int)y1));
-                            points.Add(new Point(x, (int)y1));
+                            /*points.Add(new Point(x, (int)y1));*/
                         }
                         else if (x < Math.Round(x2) && (int)y1 != (int)(y1 + m))
                         {

@@ -55,6 +55,7 @@ namespace _3
     }
     class Params
     {
+        public static Color bg_color = Color.White;
         public static csm_color cur_color = csm_color.NOT_CHOSEN;
         public static csm_algo cur_algo = csm_algo.NOT_CHOSEN;
         public static int? x1 = null;
@@ -71,7 +72,8 @@ namespace _3
             switch (cur_color)
             {
                 case csm_color.BG:
-                    color = Color.White;
+                    color = bg_color;
+                    Console.WriteLine("Background Color: " + bg_color.ToString());
                     break;
                 case csm_color.BG_BLUE:
                     color = Color.Blue;

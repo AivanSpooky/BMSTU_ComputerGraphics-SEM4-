@@ -130,7 +130,7 @@ namespace _3
             Params.SetAlgo(out draw);
 
             Pen pen = new Pen(color);
-            Draw.fill = Draw.GetRgbIntensity(pen.Color, Color.White, Draw.I);
+            Draw.fill = Draw.GetRgbIntensity(pen.Color, Params.bg_color, Draw.I);
 
             uint steps;
             draw(graphics, pen, (float)Params.x1, (float)Params.y1, (float)Params.x2, (float)Params.y2, true, false, out steps);
@@ -139,11 +139,16 @@ namespace _3
             graphics.Dispose();
         }
 
-        private void btn_clean_Click(object sender, EventArgs e)
+        public void btn_clean_Click(object sender, EventArgs e)
+        {
+            clean_picturebox();
+        }
+
+        private void clean_picturebox()
         {
             using (Graphics g = pictureBox.CreateGraphics())
             {
-                g.Clear(Color.White);
+                g.Clear(Params.bg_color);
             }
         }
 
@@ -164,7 +169,7 @@ namespace _3
             Params.SetAlgo(out draw);
 
             Pen pen = new Pen(color);
-            Draw.fill = Draw.GetRgbIntensity(pen.Color, Color.White, Draw.I);
+            Draw.fill = Draw.GetRgbIntensity(pen.Color, Params.bg_color, Draw.I);
 
             float centerX = pictureBox.Width / 2;
             float centerY = pictureBox.Height / 2;
@@ -207,7 +212,7 @@ namespace _3
 
             double[] times = new double[(uint)csm_algo.CNT];
             uint steps;
-            Draw.fill = Draw.GetRgbIntensity(pen.Color, Color.White, Draw.I);
+            Draw.fill = Draw.GetRgbIntensity(pen.Color, Params.bg_color, Draw.I);
             for (uint j = 0; j < (uint)csm_algo.CNT; j++)
             {
                 Params.cur_algo = (csm_algo)j;
@@ -272,7 +277,7 @@ namespace _3
             Color color;
             Params.SetColor(out color);
 
-            // Рисуем отрезок с использованием библиотечной функции
+            // Рисуем отрезок
             DrawSegment draw = Draw.draw_algo_lib;
             Params.SetAlgo(out draw);
 
@@ -281,7 +286,7 @@ namespace _3
             float centerX = pictureBox.Width / 2;
             float centerY = pictureBox.Height / 2;
             float angleStep = 2;
-            Draw.fill = Draw.GetRgbIntensity(pen.Color, Color.White, Draw.I);
+            Draw.fill = Draw.GetRgbIntensity(pen.Color, Params.bg_color, Draw.I);
             for (uint j = 1; j < (uint)csm_algo.CNT; j++)
             {
                 Params.cur_algo = (csm_algo)j;
@@ -384,6 +389,18 @@ namespace _3
             else
             {
                 step_chart.Series[CsmAlgoNames.ALGO_WU].Enabled = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+
+            // Показываем диалог выбора цвета и проверяем, был ли выбран цвет
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                Params.bg_color = colorDialog.Color;
+                clean_picturebox();
             }
         }
     }
