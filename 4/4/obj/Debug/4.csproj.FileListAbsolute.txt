@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\bin\Debug\4.exe.config
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\bin\Debug\4.exe
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\bin\Debug\4.pdb
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\4.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\_4.MainForm.resources
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\_4.Properties.Resources.resources
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\4.csproj.GenerateResource.cache
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\4.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\4.exe
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Компьютерная графика\4\4\obj\Debug\4.pdb
