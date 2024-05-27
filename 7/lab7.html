@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+	    <script type="text/javascript" src="lab7.js"></script>
+	    <style>
+			.button {
+			    background-color: #4CAF50;
+			    border: none;
+			    color: white;
+			    padding: 15px 32px;
+			    text-align: center;
+			    text-decoration: none;
+			    display: inline-block;
+			    font-size: 16px;
+			    margin: 4px 2px;
+			    cursor: pointer;
+			}
+			.buttonBlack {background-color: #000000;}
+			</style>
+	</head>
+
+  <body>
+
+    <!-- Interface begin -->
+    <canvas id="myCanvas" width="1590" height="800"
+    style="border:1px solid #000000;">
+    </canvas>
+<br>
+    <button class="button buttonBlack" id="3" onclick="clearAll()">Clear</button>
+    <button class="button buttonBlack" id="1" onclick="lines()">Lines</button>
+    <button class="button buttonBlack" id="3" onclick="cutter()">Cutter</button>
+    <button class="button buttonBlack" id="3" onclick="cut()">Cut</button>
+    <input type="text" id="eps" class="form" name="eps" required size="10" minlength="4" maxlength="8" placeholder="eps">
+    <button class="button buttonBlack" id="4" onclick="addPoint()">Eps</button>
+  	<label for='input-element-cutter-color'>Cutter color</label>
+	<input type='color' id='input-element-cutter-color'>
+	<label for='input-element-line-color'>Line color</label>
+	<input type='color' id='input-element-line-color'>
+	<label for='input-element-visible-color'>Visible line color</label>
+	<input type='color' id='input-element-visible-color'>
+	<label id="currentPosition"></label>
+    <!-- Interface end -->
+
+    <!-- Start prog -->
+    <script type="text/javascript"> $(document).ready(function() {
+     prepareCanvas();});
+    </script>
+    <!-- End prog ->>
+  </body>
+
+</html>
