@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+	    <script type="text/javascript" src="lab8.js"></script>
+	    <style>
+			.button {
+			    background-color: #4CAF50;
+			    border: none;
+			    color: white;
+			    padding: 15px 32px;
+			    text-align: center;
+			    text-decoration: none;
+			    display: inline-block;
+			    font-size: 16px;
+			    margin: 4px 2px;
+			    cursor: pointer;
+			}
+			.buttonBlack {background-color: #000000;}
+			</style>
+	</head>
+
+  <body>
+
+    <!-- Interface begin -->
+    <canvas id="myCanvas" width="1400" height="800"
+    style="border:1px solid #000000;">
+    </canvas>
+<br>
+    <!--Delay:
+    <input type="checkbox" name="checkfield" id="5"  onchange="delayCheck(this)"/>-->
+    <button class="button buttonBlack" id="1" onclick="cut()">Отсечь</button>
+    <button class="button buttonBlack" id="2" onclick="circuit()">Замкнуть</button>
+    <button class="button buttonBlack" id="3" onclick="clearAll()">Очистить</button>
+  	<label for='input-element-rect-color'>Цвет отсек.</label>
+	<input type='color' id='input-element-rect-color'>
+	<label for='input-element-background-color'>Цвет фона</label>
+	<input type='color' id='input-element-background-color'>
+	<input type="text" id="results" class="form" name="results" required size="10" minlength="4" maxlength="8" placeholder="X">    <input type="text" id="results2" class="form" name="results2" required size="10" minlength="4" maxlength="8" placeholder="Y">
+    <button class="button buttonBlack" id="4" onclick="addPoint()">Добавить точку</button>
+	<label id="currentPosition"></label>
+    <!-- Interface end -->
+
+    <!-- Start prog -->
+    <script type="text/javascript"> $(document).ready(function() {
+     prepareCanvas();});
+    </script>
+    <!-- End prog ->>
+  </body>
+
+</html>
