@@ -1,0 +1,20 @@
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\bin\Debug\lab_10_2.exe.config
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\bin\Debug\lab_10_2.exe
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\bin\Debug\lab_10_2.pdb
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.Form1.resources
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.Properties.Resources.resources
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.csproj.GenerateResource.cache
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.exe
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10_2\obj\Debug\lab_10_2.pdb
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\bin\Debug\lab_10_2.exe.config
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\bin\Debug\lab_10_2.exe
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\bin\Debug\lab_10_2.pdb
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.Form1.resources
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.Properties.Resources.resources
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.csproj.GenerateResource.cache
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.exe
+C:\Users\User\Desktop\учеба\бауманка\4-sem\Компьютерная графика\10\lab_10_2\obj\Debug\lab_10_2.pdb

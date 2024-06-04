@@ -1,0 +1,10 @@
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\bin\Debug\lab_10.exe.config
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\bin\Debug\lab_10.exe
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\bin\Debug\lab_10.pdb
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.Form1.resources
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.Properties.Resources.resources
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.csproj.GenerateResource.cache
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.exe
+C:\Users\User\Downloads\bmstu_CG-master\bmstu_CG-master\lab_10\lab_10\lab_10\obj\Debug\lab_10.pdb
